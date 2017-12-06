@@ -1,2 +1,24 @@
-# 06-12-17
-for learning purpose
+SELECT firstname, lastname FROM customer;
+SELECT DISTINCT fullname FROM customer;
+SELECT COUNT(DISTINCT country) FROM customer;
+-----------------------------------------------------------------------------
+SELECT country FROM customer;
+SELECT DISTINCT country FROM customer;
+SELECT COUNT(DISTINCT country) FROM customer;
+SELECT country FROM customer WHERE contrycode=1;
+SELECT * FROM customer WHERE country='chennai' AND city='madurai';
+INSERT INTO customer (fname,lname,address)VALUES('nagaraj','shanmugam','chinnamanur');
+INSERT INTO customer VALUES('nagaraj','shanmugam',1);
+SELECT * FROM customer WHERE address IS NULL;
+SELECT * FROM customer WHERE address IS NOT NULL;
+UPDATE customer SET country='chennai' WHERE cname='Nagaraj';
+DELETE FROM customer WHERE country='chennai';
+SELECT * FROM customer ORDER BY first_name;
+SELECT * FROM customer ORDER BY ASC|DESC;
+SELECT firstname, lastname, address FROM person WHERE address IS NULL|IS NOT NULL;
+UPDATE customer SET firstname='nagaraj, lastname='shanmugam, age=23 WHERE status=1;
+DELETE FROM customer WHERE firstname='nagaraj';
+SELECT * FROM customer LIMIT 4;
+SELECT MIN(price) AS smallestPrice FROM customer;
+SELECT COUNT(productID) FROM customer;
+SELECT * FROM customer WHERE customername LIKE 'n%';
